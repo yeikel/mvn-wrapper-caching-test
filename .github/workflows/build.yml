@@ -10,7 +10,7 @@ jobs:
       - name: Set up JDK 17
         uses: yeikel/setup-java@cache/mvn-wrapper
         with:
-          java-version: '17'
+          java-version: '11'
           distribution: 'temurin'
           cache: 'maven'
       - name: Build with Maven
