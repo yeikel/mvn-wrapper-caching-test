@@ -16,4 +16,4 @@ jobs:
       - name: Build with Maven
         env:
           MVNW_VERBOSE: "true"
-        run: ./mvnw verify -X
+        run: ./mvnw verify
