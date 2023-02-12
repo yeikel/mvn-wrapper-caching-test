@@ -9,11 +9,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
+        env:
+          MVNW_VERBOSE: "true"
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
       - name: Build with Maven
-        environment: 
-          MVNW_VERBOSE: "true"
         run: ./mvnw verify
