@@ -5,7 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    environment: 
+            MVNW_VERBOSE: "true"
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -16,5 +17,3 @@ jobs:
           cache: 'maven'
       - name: Build with Maven
         run: ./mvnw verify
-        environment: 
-            MVNW_VERBOSE: "true"
