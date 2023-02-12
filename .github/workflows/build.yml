@@ -16,3 +16,5 @@ jobs:
           cache: 'maven'
       - name: Build with Maven
         run: ./mvnw verify
+        environment: 
+            MVNW_VERBOSE: "true"
